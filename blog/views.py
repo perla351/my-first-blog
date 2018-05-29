@@ -1,4 +1,3 @@
-
 from django.shortcuts import redirect
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
@@ -21,7 +20,7 @@ def post_new(request):
      form = PostForm(request.POST)
      if form.is_valid():
         post = form.save(commit=False)
-        Post.author = request.user
+        post.author = request.user
         post.published_date = timezone.now()
         post.save()
         return redirect('post_detail', pk=post.pk)
