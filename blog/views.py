@@ -6,7 +6,7 @@ from django.shortcuts import render, get_object_or_404
 from .forms import PostForm
 from django.contrib.auth.decorators import login_required
 from .forms import PostForm, CommentForm
-from .models import Post, comment
+from .models import Post, Comment
 
 
 
@@ -68,14 +68,14 @@ def post_remove(request, pk):
 def add_comment_to_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
-         form = commentForm(request.POST)
+         form = CommentForm(request.POST)
          if form.is_valid():
              comment = form.save(commit=False)
              comment.post = post
              comment.save()
              return redirect('post_detail', pk=post.pk)
     else:
-        form = commentForm()
+        form = CommentForm()
     return render(request, 'blog/add_comment_to_post.html', {'form': form})
 
 @login_required

@@ -1,9 +1,9 @@
 h1 a {
-     color: #FCA205;
+     color: #FF00CC;
     font-family:'lobster';
 }
 .page-header {
-    background-color: #ff9410;
+    background-color: #CC6666;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -16,16 +16,17 @@ h1 a {
 
 .content {
    margin-left: 40px;
+   color: Crimson;
 }
 
 h1, h2, h3, h4 {
-  font-family: 'lobster',
+  font-family:'lobster',
 
 }
 
 .date {
     float: right;
-    color: #828282;
+    color: #FF6699;
 }
 .save {
      float:right;
@@ -35,7 +36,7 @@ h1, h2, h3, h4 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color:#795548;
+    color: maroon;
     float: right;
     font-size: 26pt; 
     margin-right: 20px;   
